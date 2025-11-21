@@ -1,0 +1,132 @@
+import math
+print(math.ceil(2.9))  # round up
+print(math.floor(2.9))  # round down
+print(math.sqrt(16))  # square root  
+print(math.factorial(5))  # factorial
+print(math.gcd(12, 15))  # greatest common divisor  
+
+import math
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+print(lcm(12, 15))
+print(math.pow(2, 3))  # power 2**3
+print(math.log(100, 10))  # logarithm base 10
+print(math.sin(math.pi / 2))  # sine of 90 degrees
+print(math.cos(0))  # cosine of 0 degrees   
+print(math.tan(math.pi / 4))  # tangent of 45 degrees
+
+print(math.radians(180))  # degrees to radians
+print(math.degrees(math.pi))  # radians to degrees  
+print(math.exp(2))  # e^2
+
+import math
+
+# ======================================
+# 1. IMPORTANT CONSTANTS
+# ======================================
+
+print(math.pi)        # π (3.14159...) - used in geometry, trigonometry
+print(math.e)         # e (2.71828...) - base of natural logs, used in growth/decay
+print(math.tau)       # τ = 2π (6.28318...)
+print(math.inf)       # Infinity value
+print(math.nan)       # Not-a-Number (invalid math result)
+
+
+
+# ======================================
+# 2. POWER & EXPONENTIAL FUNCTIONS
+# ======================================
+
+print(math.pow(2, 3))     # 2^3 = 8.0 (always float)
+print(2 ** 3)             # Same as pow but returns int if possible
+
+print(math.sqrt(25))      # Square root → 5.0
+
+print(math.exp(2))        # e^2 (≈ 7.389)
+print(math.expm1(1e-5))   # More accurate for (e^x - 1) when x is small
+
+print(math.log(100, 10))  # Logarithm → log base 10 of 100 = 2
+print(math.log10(1000))   # Log base 10 → 3
+print(math.log2(8))       # Log base 2 → 3
+
+
+
+# ======================================
+# 3. TRIGONOMETRY (uses radians)
+# ======================================
+
+print(math.sin(math.pi / 2))   # sin(90°) = 1
+print(math.cos(0))             # cos(0°) = 1
+print(math.tan(math.pi / 4))   # tan(45°) = 1
+
+# Inverse trigonometric functions (give radians)
+print(math.asin(1))            # arcsin(1) = π/2
+print(math.acos(0))            # arccos(0) = π/2
+print(math.atan(1))            # arctan(1) = π/4
+print(math.atan2(1, 1))        # More accurate angle function → π/4
+
+
+
+# ======================================
+# 4. ANGLE CONVERSIONS
+# ======================================
+
+print(math.radians(180))      # Convert 180° → π radians
+print(math.degrees(math.pi))  # Convert π radians → 180°
+
+
+
+# ======================================
+# 5. ROUNDING FUNCTIONS
+# ======================================
+
+print(math.ceil(4.1))    # Round UP → 5
+print(math.floor(4.9))   # Round DOWN → 4
+print(math.trunc(4.9))   # Remove decimals → 4
+print(math.fabs(-10))    # Absolute value → 10.0
+
+# Splits number: (fraction, integer)
+print(math.modf(4.75))   # (0.75, 4.0)
+
+
+
+# ======================================
+# 6. GCD, LCM, SUMMATION
+# ======================================
+
+print(math.gcd(12, 15))   # Greatest Common Divisor → 3
+# print(math.lcm(12, 15)) # Least Common Multiple → 60 (Python 3.9+ only)
+
+nums = [0.1, 0.2, 0.3]
+print(math.fsum(nums))    # High precision sum → 0.6000000000000001
+
+
+
+# ======================================
+# 7. COMBINATORICS (Useful in DSA)
+# ======================================
+
+print(math.factorial(5))    # 5! = 120
+print
+print(math.comb(5, 2))      # Combinations: 5C2 = 10
+
+
+
+# ======================================
+# 8. CHECKING TYPES
+# ======================================
+import math
+print(math.isfinite(10))      # True (normal number)
+print(math.isinf(math.inf))   # True (infinity)
+print(math.isnan(math.nan))   # True (not a number)
+
+
+
+# ======================================
+# 9. INTEGER SQUARE ROOT (Python 3.8+)
+# ======================================
+
+# Gives the largest integer whose square <= n
+print(math.isqrt(20))         # Integer square root of 20 → 4
